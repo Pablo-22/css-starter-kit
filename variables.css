@@ -1,0 +1,50 @@
+/****** Variables ******/
+:root{
+
+    /****** Main ******/
+    --palette-1: #FFFFFF;
+    --palette-2: #FFFFFF;
+    --palette-3: #FFFFFF;
+    --palette-4: #FFFFFF;
+    --palette-5: #FFFFFF;
+    --palette-6: #FFFFFF;
+    --palette-7: #FFFFFF;
+    --palette-8: #FFFFFF;
+    --palette-9: #FFFFFF;
+    --palette-10: #FFFFFF;
+    
+
+    --txt-primary: --dark-4;
+    --txt-secondary: var(--dark-3);
+
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #FFFFFF;
+    
+    --txt-cta-1: #FFFFFF;
+    --txt-cta-2: #FFFFFF;
+    --txt-cta-3: #FFFFFF;
+    
+    --bg-cta-1: #FFFFFF;
+    --bg-cta-2: #FFFFFF;
+    --bg-cta-3: #FFFFFF;
+
+    --bg-selected: #FFFFFF;
+    --txt-selected: #FFFFFF;
+
+    /****** Extra ******/
+    --s-high: #FFFFFF;
+    --s-medium-high: #FFFFFF;
+    --s-medium: #FFFFFF;
+    --s-medium-low: #FFFFFF;
+    --s-low: #FFFFFF;
+    
+    --light-1: #fafafa;
+    --light-2: #f8fafc;
+    --light-3: #e5e7eb;
+    --light-4: #d1d5db;
+
+    --dark-1: #6b7280;
+    --dark-2: #4b5563;
+    --dark-3: #374151;
+    --dark-4: #111827;
+}
