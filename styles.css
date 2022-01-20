@@ -1,3 +1,107 @@
-@import url(variables.css);
+:root {
+	
+	/* Colors */
+		--bg-canvas: #FFFF; /* Main background color */
+		--font-color: #000; /* Main font color */
+		
+		--bg-selected: rgb(52, 195, 231); /* Background color for selected text */
+		--font-color--selected: rgb(0, 0, 0); /* Color for selected text */	
+	
+		/* DARK MODE */
+			--d-bg-canvas: rgb(47, 47, 47); /* Main background color */
+			--d-font-color: #FFFF; /* Main font color */
+
+			--d-bg-selected: rgb(52, 195, 231); /* Background color for selected text */
+			--d-font-color--selected: rgb(255, 255, 255); /* Color for selected text */
+		/* End DARK MODE */
+	/* End Colors */
+	
+	
+	
+	
+	
+	
+	
+	
+	/* Typography | Global */
+	--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+
+
+	font-size: var(--text-base-size);
+	font-family: var(--font-sans);
+
+	/* body font size */
+	--text-base-size: 1em;
+  
+	/* type scale */
+	--text-scale-ratio: 1.5;
+
+	--text-xs: calc( var(--text-base-size) / var(--text-scale-ratio) / var(--text-scale-ratio));
+	--text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+	--text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+	--text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+	--text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+	--text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+  }
+  
+  @media (min-width: 64rem) { /* responsive decision applied to all text elements */
+	:root {
+	  --text-base-size: 1.25em;
+	  --text-scale-ratio: 1.25;
+	}
+  }
+  
+  h1, .text-xxl   { font-size: var(--text-xxl, 2.074em); }
+  h2, .text-xl    { font-size: var(--text-xl, 1.728em); }
+  h3, .text-lg    { font-size: var(--text-lg, 1.44em); }
+  h4, .text-md    { font-size: var(--text-md, 1.2em); }
+  h5, .text-base      { font-size: var(--text-base-size); }
+  h6, small, .text-sm { font-size: var(--text-sm, 0.833em); }
+  .text-xs        { font-size: var(--text-xs, 0.694em); }
+
+
+  * {
+	/* Reset margins and padding */
+	margin: 0;
+	padding: 0;
+}
+
+
+
+address, area, article, aside, audio, blockquote, datalist, details,
+dl, fieldset, figure, form, input, iframe, img, meter, nav, ol, optgroup,
+option, output, p, pre, progress, ruby, section, table, textarea, ul, video 
+{
+	/* Margins for most elements */
+	margin-bottom: 1rem;
+}
+
+
+
+body {
+	/* Center body in page */
+	margin: 0 auto;
+	max-width: 100vw;
+	padding: 2rem;
+	border-radius: 6px;
+	overflow-x: hidden;
+	word-break: break-word;
+	overflow-wrap: break-word;
+
+	background: var(--bg-canvas);
+
+	/* Main body text */
+	color: var(--font-color);
+	line-height: 1.5;
+}
+
+
+
+::selection {
+	/* Set background color for selected text */
+	background: var(--bg-selected);
+	color: var(--font-color--selected);
+}
 
 
