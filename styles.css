@@ -1,21 +1,25 @@
+@import url(shadows.css);
+@import url(animations.css);
+@import url(sizes.css);
+
 :root {
 	
 	/* Colors */
 		--bg-canvas: #FFFF; /* Main background color */
 		--font-color: #000; /* Main font color */
 		
-		--bg-selected: rgb(52, 195, 231); /* Background color for selected text */
+		--bg--selected: rgb(52, 195, 231); /* Background color for selected text */
 		--font-color--selected: rgb(0, 0, 0); /* Color for selected text */
 
 		--link-color: rgb(6, 154, 212); /* Font color for <a> tags */
-		--hover-link-color: rgb(19, 60, 148); /* Font color for <a> tag at :hover */
+		--link-color--hover: rgb(19, 60, 148); /* Font color for <a> tag at :hover */
 
 
 		--primary-color: rgb(9, 153, 211); /* Main color on palette */
 		--primary__font-color: #FFFF; /* The colour to be used for text above the primary color */
 
-		--hover-primary-color: rgb(22, 134, 179); /* Main color on palette at :hover */
-		--hover-primary__font-color: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
+		--primary-color--hover: rgb(22, 134, 179); /* Main color on palette at :hover */
+		--primary__font-color--hover: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
 
 		--secondary-color: rgb(78, 230, 209); /* Secondary color on palette */
 		--secondary__font-color: rgb(0, 0, 0); /* The colour to be used for text above the secondary color */
@@ -28,7 +32,7 @@
 			--d-bg-canvas: rgb(47, 47, 47); /* Main background color */
 			--d-font-color: #FFFF; /* Main font color */
 
-			--d-bg-selected: rgb(52, 195, 231); /* Background color for selected text */
+			--d-bg--selected: rgb(52, 195, 231); /* Background color for selected text */
 			--d-font-color--selected: rgb(255, 255, 255); /* Color for selected text */
 
 			--d-link-color: rgb(6, 154, 212); /* Font color for <a> tags */
@@ -38,8 +42,8 @@
 			--d-primary-color: rgb(9, 153, 211); /* Main color on palette */
 			--d-primary__font-color: #FFFF; /* The colour to be used for text above the primary color */
 
-			--d-hover-primary-color: rgb(22, 134, 179); /* Main color on palette at :hover */
-			--d-hover-primary__font-color: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
+			--d-primary-color--hover: rgb(22, 134, 179); /* Main color on palette at :hover */
+			--d-primary__font-color--hover: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
 
 			--d-secondary-color: rgb(78, 230, 209); /* Secondary color on palette */
 			--d-secondary__font-color: rgb(0, 0, 0); /* The colour to be used for text above the secondary color */
@@ -65,115 +69,10 @@
 	/* End Colors */
 
 
-	/* SHADOWS */
-		--shadow-color: 220 3% 15%;
-		--shadow-strength: 1%;
-
-		--shadow-1: 0 1px 2px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
-
-		--shadow-2: 
-		0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-		0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
-
-		--shadow-3: 
-		0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-		0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-		0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-		0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-		0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
-
-		--shadow-4: 
-		0 -2px 5px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-		0 1px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-		0 2px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-		0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-		0 9px 9px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-		0 16px 16px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%));
-
-		--shadow-5: 
-		0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-		0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-		0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-		0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-		0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-		0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
-
-		--shadow-6: 
-		0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-		0 3px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-		0 7px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-		0 12px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-		0 22px 18px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-		0 41px 33px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
-		0 100px 80px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
-
-		--inner-shadow-0: inset 0 0 0 1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
-		--inner-shadow-1: inset 0 1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
-		--inner-shadow-2: inset 0 1px 4px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
-		--inner-shadow-3: inset 0 2px 8px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
-		--inner-shadow-4: inset 0 2px 14px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
-	/* End SHADOWS */
+	
 
 
-	/* ANIMATIONS VARIABLES */
-		--animation-fade-in: fade-in .5s var(--ease-3);
-		--animation-fade-out: fade-out .5s var(--ease-3);
-		--animation-scale-up: scale-up .5s var(--ease-3);
-		--animation-scale-down: scale-down .5s var(--ease-3);
-		--animation-slide-out-up: slide-out-up .5s var(--ease-3);
-		--animation-slide-out-down: slide-out-down .5s var(--ease-3);
-		--animation-slide-out-right: slide-out-right .5s var(--ease-3);
-		--animation-slide-out-left: slide-out-left .5s var(--ease-3);
-		--animation-slide-in-up: slide-in-up .5s var(--ease-3);
-		--animation-slide-in-down: slide-in-down .5s var(--ease-3);
-		--animation-slide-in-right: slide-in-right .5s var(--ease-3);
-		--animation-slide-in-left: slide-in-left .5s var(--ease-3);
-		--animation-shake-x: shake-x .75s var(--ease-out-5);
-		--animation-shake-y: shake-y .75s var(--ease-out-5);
-		--animation-spin: spin 2s linear infinite;
-		--animation-ping: ping 5s var(--ease-out-3) infinite;
-		--animation-blink: blink 1s var(--ease-out-3) infinite;
-		--animation-float: float 3s var(--ease-in-out-3) infinite;
-		--animation-bounce: bounce 2s var(--ease-squish-2) infinite;
-		--animation-pulse: pulse 2s var(--ease-out-3) infinite;
-
-
-		--ease-1: cubic-bezier(.25, 0, .5, 1);
-		--ease-2: cubic-bezier(.25, 0, .4, 1);
-		--ease-3: cubic-bezier(.25, 0, .3, 1);
-		--ease-4: cubic-bezier(.25, 0, .2, 1);
-		--ease-5: cubic-bezier(.25, 0, .1, 1);
-		--ease-in-1: cubic-bezier(.25, 0, 1, 1);
-		--ease-in-2: cubic-bezier(.50, 0, 1, 1);
-		--ease-in-3: cubic-bezier(.70, 0, 1, 1);
-		--ease-in-4: cubic-bezier(.90, 0, 1, 1);
-		--ease-in-5: cubic-bezier(1, 0, 1, 1);
-		--ease-out-1: cubic-bezier(0, 0, .75, 1);
-		--ease-out-2: cubic-bezier(0, 0, .50, 1);
-		--ease-out-3: cubic-bezier(0, 0, .3, 1);
-		--ease-out-4: cubic-bezier(0, 0, .1, 1);
-		--ease-out-5: cubic-bezier(0, 0, 0, 1);
-		--ease-in-out-1: cubic-bezier(.1, 0, .9, 1);
-		--ease-in-out-2: cubic-bezier(.3, 0, .7, 1);
-		--ease-in-out-3: cubic-bezier(.5, 0, .5, 1);
-		--ease-in-out-4: cubic-bezier(.7, 0, .3, 1);
-		--ease-in-out-5: cubic-bezier(.9, 0, .1, 1);
-		--ease-elastic-1: cubic-bezier(.5, .75, .75, 1.25);
-		--ease-elastic-2: cubic-bezier(.5, 1, .75, 1.25);
-		--ease-elastic-3: cubic-bezier(.5, 1.25, .75, 1.25);
-		--ease-elastic-4: cubic-bezier(.5, 1.5, .75, 1.25);
-		--ease-elastic-5: cubic-bezier(.5, 1.75, .75, 1.25);
-		--ease-squish-1: cubic-bezier(.5, -.1, .1, 1.5);
-		--ease-squish-2: cubic-bezier(.5, -.3, .1, 1.5);
-		--ease-squish-3: cubic-bezier(.5, -.5, .1, 1.5);
-		--ease-squish-4: cubic-bezier(.5, -.7, .1, 1.5);
-		--ease-squish-5: cubic-bezier(.5, -.9, .1, 1.5);
-		--ease-step-1: steps(2);
-		--ease-step-2: steps(3);
-		--ease-step-3: steps(4);
-		--ease-step-4: steps(7);
-		--ease-step-5: steps(10);
-	/* End ANIMATIONS VARIABLES*/
+	
 	
 	
 	
@@ -186,7 +85,7 @@
 	font-family: var(--font-sans);
 
 	/* Body font size */
-	--text-base-size: 0.8em;
+	--text-base-size: 1em;
   
 	/* Type scale */
 	--text-scale-ratio: 1.25;
@@ -197,11 +96,15 @@
 	--text-lg: calc(var(--text-md) * var(--text-scale-ratio));
 	--text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
 	--text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+
+
+	/* Input size */
+	--input-base-width: 10rem;
   }
   
 @media (min-width: 64rem) { /* Responsive decision applied to all text elements */
 	:root {
-		--text-base-size: 1em;
+		--text-base-size: 1.2em;
 		--text-scale-ratio: 1.25;
 	}
 }
@@ -222,105 +125,7 @@ h6, small, .text-sm { font-size: var(--text-sm); }
 }
 
 
-
-
-/************ ANIMATIONS ******************************/
-/************ ANIMATIONS ******************************/
-/************ ANIMATIONS ******************************/
-/************ ANIMATIONS ******************************/
-
-@keyframes fade-in {
-	to { opacity: 1 }
-}
-@keyframes fade-out {
-	to { opacity: 0 }
-}
-@keyframes scale-up {
-	to { transform: scale(1.25) }
-}
-@keyframes scale-down {
-	to { transform: scale(.75) }
-}
-@keyframes slide-out-up {
-	to { transform: translateY(-100%) }
-}
-@keyframes slide-out-down {
-	to { transform: translateY(100%) }
-}
-@keyframes slide-out-right {
-	to { transform: translateX(100%) }
-}
-@keyframes slide-out-left {
-	to { transform: translateX(-100%) }
-}
-@keyframes slide-in-up {
-	from { transform: translateY(100%) }
-}
-@keyframes slide-in-down {
-	from { transform: translateY(-100%) }
-}
-@keyframes slide-in-right {
-	from { transform: translateX(-100%) }
-}
-@keyframes slide-in-left {
-	from { transform: translateX(100%) }
-}
-@keyframes shake-x {
-	0%, 100% { transform: translateX(0%) }
-	20% { transform: translateX(-5%) }
-	40% { transform: translateX(5%) }
-	60% { transform: translateX(-5%) }
-	80% { transform: translateX(5%) }
-}
-@keyframes shake-y {
-	0%, 100% { transform: translateY(0%) }
-	20% { transform: translateY(-5%) }
-	40% { transform: translateY(5%) }
-	60% { transform: translateY(-5%) }
-	80% { transform: translateY(5%) }
-}
-@keyframes spin {
-	to { transform: rotate(1turn) }
-}
-@keyframes ping {
-	90%, 100% {
-	transform: scale(2);
-	opacity: 0;
-	}
-}
-@keyframes blink {
-	0%, 100% {
-	opacity: 1
-	}
-	50% {
-	opacity: .5
-	}
-}
-@keyframes float {
-	50% { transform: translateY(-25%) }
-}
-@keyframes bounce {
-	25% { transform: translateY(-20%) }
-	40% { transform: translateY(-3%) }
-	0%, 60%,100% { transform: translateY(0) }
-}
-@keyframes pulse {
-	50% { transform: scale(.9,.9) }
-}
-/************ End ANIMATIONS ************************/
-/************ End ANIMATIONS ************************/
-/************ End ANIMATIONS ************************/
-/************ End ANIMATIONS ************************/
-
-
-
-
-
-
-
-
-
-address, area, article, aside, audio, blockquote, datalist, details,
+address, area, aside, audio, blockquote, datalist, details,
 dl, fieldset, figure, form, input, iframe, img, meter, nav, ol, optgroup,
 option, output, p, pre, progress, ruby, section, table, textarea, ul, video 
 {
@@ -351,7 +156,7 @@ body {
 
 ::selection {
 	/* Set background color for selected text */
-	background: var(--bg-selected);
+	background: var(--bg--selected);
 	color: var(--font-color--selected);
 }
 
@@ -372,7 +177,7 @@ h3 {
 h4,
 h5,
 h6 {
-	margin-bottom: .3rem;
+	margin-bottom: .6rem;
 }
 
 
@@ -382,7 +187,7 @@ a {
 }
 
 a:hover {
-	color: var(--hover-link-color);
+	color: var(--link-color--hover);
 }
 
 
@@ -485,8 +290,8 @@ input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
 input[type="button"]:focus,
 input[type="button"]:enabled:hover {
-	background: var(--hover-primary-color);
-	color: var(--hover-primary__font-color);
+	background: var(--primary-color--hover);
+	color: var(--primary__font-color--hover);
 }
 
 
@@ -677,7 +482,7 @@ ol ol {
 
 mark {
 	padding: .1875rem .375rem;
-	background: var(--bg-selected);
+	background: var(--bg--selected);
 	color: var(--font-color--selected);
 }
 
@@ -702,13 +507,45 @@ img {
 
 article{
 	padding: 1.5rem;
-	background: var(--gray-0);
+	/* background: var(--gray-0); */
 	border-radius: .375rem;
-	box-shadow: var(--shadow-4);
 }
 
 
-tag{
+
+/**
+* Grid
+* Minimal grid system with auto-layout columns
+*/
+.grid {
+	grid-column-gap: 3rem;
+	grid-row-gap: 3rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0;
+  }
+  @media (min-width: 992px) {
+	.grid {
+	  grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+	}
+  }
+  .grid > * {
+	min-width: 0;
+  }
+
+
+
+
+
+
+
+
+
+/**** UTILITY CLASSES ****/
+
+
+.chip{
+	display: inline;
 	padding-block: .125rem;
 	padding-inline: .85rem;
 	width: fit-content;
@@ -718,13 +555,6 @@ tag{
 }
 
 
-.test-animation{
-	background-color: var(--gray-5);
-	animation:
-    var(--animation-fade-out) forwards,
-    var(--animation-slide-out-down);
-  	animation-timing-function: var(--ease-squish-3);
-  	animation-duration: 1s;
-	margin-top: 1rem;
-	width: 80px;
+.boxes-container > *{
+	margin-bottom: var(--size-3);
 }

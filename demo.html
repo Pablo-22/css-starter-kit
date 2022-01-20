@@ -10,12 +10,12 @@
 </head>
 <body>
     <header>
-        <h1>new.css Demo</h1>
+        <h1>css-starter-kit Demo</h1>
     </header>
 
-    <tag> first tag </tag>  <tag> - Another tag - </tag>  <tag> #ThirdTag </tag>
-
-    <div class="test-animation"> Animation </div>
+    <div class="chip"> first tag </div>  
+    <div class="chip"> - Another tag - </div>  
+    <div class="chip"> #ThirdTag </div>
 
     <h1>Heading 1</h1>
     <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -96,8 +96,8 @@
     <hr>
     <br>
 
-    <article>
-        <h4> Create cards just with article </h4>
+    <article class="box-shadow-3">
+        <h4> Create cards just with article and .box-shadow-* class </h4>
         <p> 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. <code>Hic culpa, nobis doloremque</code> veniam non,
             nihil
@@ -106,7 +106,93 @@
         </p>
     </article>
 
+    <article class="grid">
+        <article>
+            <h4> Card without shadow </h4>
+            <p>
+                Create this with <code>article</code> tag.
+                <br>
+                This block is inside a grid 
+                <br>
+                (Just using <code>.grid</code> on container element)
+            </p>
+        </article>
+        <article>
+            <h4> Card without shadow </h4>
+            <p>
+                Create this with <code>article</code> tag.
+                This block is inside a grid (Just using <code>.grid</code> on container element)
+            </p>
+        </article>
+        <article>
+            <h4> Card without shadow </h4>
+            <p>
+                Create this with <code>article</code> tag.
+                This block is inside a grid (Just using <code>.grid</code> on container element)
+            </p>
+        </article>
+    </article>
+
+    <hr>
     <br>
+
+    <h2>Sizes with utility classes and custom properties</h2>
+
+    <article class="boxes-container" style="color: white;">
+        <div class="width-00" style="background-color: var(--primary-color);" >
+            .
+        </div>
+        <div class="width-0" style="background-color: var(--primary-color);" >
+            0
+        </div>
+        <div class="width-1" style="background-color: var(--primary-color);" >
+            1
+        </div>
+        <div class="width-2" style="background-color: var(--primary-color);" >
+            2
+        </div>
+        <div class="width-3" style="background-color: var(--primary-color);" >
+            3
+        </div>
+        <div class="width-4" style="background-color: var(--primary-color);" >
+            4
+        </div>
+        <div class="width-5" style="background-color: var(--primary-color);" >
+            5
+        </div>
+        <div class="width-6" style="background-color: var(--primary-color);" >
+            6
+        </div>
+        <div class="width-7" style="background-color: var(--primary-color);" >
+            7
+        </div>
+        <div class="width-8" style="background-color: var(--primary-color);" >
+            8
+        </div>
+        <div class="width-9" style="background-color: var(--primary-color);" >
+            9
+        </div>
+        <div class="width-10" style="background-color: var(--primary-color);" >
+            10
+        </div>
+        <div class="width-11" style="background-color: var(--primary-color);" >
+            11
+        </div>
+        <div class="width-12" style="background-color: var(--primary-color);" >
+            12
+        </div>
+        <div class="width-13" style="background-color: var(--primary-color);" >
+            13
+        </div>
+        <div class="width-14" style="background-color: var(--primary-color);" >
+            14
+        </div>
+        <div class="width-15" style="background-color: var(--primary-color);" >
+            15
+        </div>
+    </article>
+
+    <br>   
     <hr>
     <br>
 
