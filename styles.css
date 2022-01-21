@@ -126,8 +126,8 @@ h6, small, .text-sm { font-size: var(--text-sm); }
 
 * > *{
 	transition: 
-      background-color .2s var(--ease-3),
-      color .2s var(--ease-3);
+      background-color .3s var(--ease-3),
+      color .3s var(--ease-3);
 }
 
 
@@ -136,7 +136,7 @@ dl, fieldset, figure, form, input, iframe, img, meter, ol, optgroup,
 option, output, p, pre, progress, ruby, section, table, textarea, ul, video 
 {
 	/* Margins for most elements */
-	margin-bottom: 1rem;
+	margin-bottom: var(--size-1);
 }
 
 
@@ -188,6 +188,7 @@ h6 {
 
 a { /* Link */
 	color: var(--link-color);
+	text-decoration: none;
 }
 
 a:hover { /* Link */
@@ -222,7 +223,7 @@ blockquote *:last-child {
 header {
 	background: var(--gray-1);
 	border-bottom: 1px solid var(--gray-4);
-	padding: 1rem 1.5rem;
+	padding: var(--size-1) 1.5rem;
 	
 	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
 
@@ -256,7 +257,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-	font-size: 1rem;
+	font-size: var(--size-1);
 	display: inline-block;
 	padding: 6px 12px;
 	text-align: center;
@@ -335,7 +336,7 @@ kbd {
 
 
 pre {
-	padding: 1rem 1.4rem;
+	padding: var(--size-1) 1.4rem;
 	max-width: 100%;
 	overflow: auto;
 }
@@ -366,7 +367,7 @@ code pre {
 
 details {
 	/* Make the <details> look more "clickable" */
-	padding: .7rem 1rem;
+	padding: .7rem var(--size-1);
 	background: var(--gray-0);
 	border: .0625rem solid var(--gray-1);
 	border-radius: .25rem;
@@ -413,12 +414,12 @@ hr {
 	/* Reset the border of the <hr> separator, then set a better line */
 	border: 0;
 	border-bottom: .0625rem solid var(--gray-2);
-	margin: 1rem auto;
+	margin: var(--size-1) auto;
 }
 
 
 fieldset {
-	margin-top: 1rem;
+	margin-top: var(--size-1);
 	padding: 2rem;
 	border: .0625rem solid var(--gray-3);
 	border-radius: .25rem;
@@ -587,22 +588,32 @@ section{
 
 button.big{
 	padding-inline: 2rem;
-	padding-block: 1rem;
+	padding-block: var(--size-1);
 }
 
 
-.fx-row {
+/* FLEXBOX */
+
+.fx-row { /* Allows you to make a responsive row of elements */
     display: flex;
     align-items: center;
 	flex-wrap: wrap;
-	row-gap: 1rem;
+	row-gap: var(--size-1);
 }
 
 .fx-row > * {
-    margin-inline: 1rem;
+    margin-inline: var(--size-1);
 }
 
 
+.fx-column { /* Allows you to make a responsive column of elements */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+	row-gap: var(--size-2);
+}
+
+/* End FLEXBOX */
 
 
 /* BUTTONS */
