@@ -16,7 +16,7 @@
 
 
 		--primary-color: rgb(9, 153, 211); /* Main color on palette */
-		--primary__font-color: #FFFF; /* The colour to be used for text above the primary color */
+		--primary-color__font: #FFFF; /* The colour to be used for text above the primary color */
 
 		--primary-color--hover: rgb(22, 134, 179); /* Main color on palette at :hover */
 		--primary__font-color--hover: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
@@ -40,7 +40,7 @@
 
 
 			--d-primary-color: rgb(9, 153, 211); /* Main color on palette */
-			--d-primary__font-color: #FFFF; /* The colour to be used for text above the primary color */
+			--d-primary-color__font: #FFFF; /* The colour to be used for text above the primary color */
 
 			--d-primary-color--hover: rgb(22, 134, 179); /* Main color on palette at :hover */
 			--d-primary__font-color--hover: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
@@ -124,9 +124,15 @@ h6, small, .text-sm { font-size: var(--text-sm); }
 	padding: 0;
 }
 
+* > *{
+	transition: 
+      background-color .2s var(--ease-3),
+      color .2s var(--ease-3);
+}
+
 
 address, area, aside, audio, blockquote, datalist, details,
-dl, fieldset, figure, form, input, iframe, img, meter, nav, ol, optgroup,
+dl, fieldset, figure, form, input, iframe, img, meter, ol, optgroup,
 option, output, p, pre, progress, ruby, section, table, textarea, ul, video 
 {
 	/* Margins for most elements */
@@ -180,12 +186,13 @@ h6 {
 
 
 
-a {
+a { /* Link */
 	color: var(--link-color);
 }
 
-a:hover {
+a:hover { /* Link */
 	color: var(--link-color--hover);
+	cursor:pointer;
 }
 
 
@@ -244,7 +251,7 @@ header > *:last-child {
 }
 
 
-a button,
+a /* Link */ button,
 button,
 input[type="submit"],
 input[type="reset"],
@@ -256,7 +263,7 @@ input[type="button"] {
 	text-decoration: none;
 	white-space: nowrap;
 	background: var(--primary-color);
-	color: var(--primary__font-color);
+	color: var(--primary-color__font);
 	border: 0;
 	border-radius: .30rem;
 	box-sizing: border-box;
@@ -264,7 +271,7 @@ input[type="button"] {
 }
 
 
-a button[disabled],
+a /* Link */ button[disabled],
 button[disabled],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
@@ -293,7 +300,7 @@ input[type="button"]:enabled:hover {
 }
 
 
-a img {
+a /* Link */ img {
 	margin-bottom: 0px;
 }
 
@@ -588,9 +595,33 @@ button.big{
     display: flex;
     align-items: center;
 	flex-wrap: wrap;
+	row-gap: 1rem;
 }
 
 .fx-row > * {
     margin-inline: 1rem;
-	margin-block: .5rem
+}
+
+
+
+
+/* BUTTONS */
+button.outline{
+    background-color: var(--bg-canvas);
+	border: .125rem solid var(--primary-color);
+	color: var(--primary-color);
+}
+
+button:active{
+    background-color: var(--bg-canvas);
+}
+
+button.outline:hover{
+	background-color: var(--primary-color);
+    color: var(--primary-color__font);
+}
+
+
+button.text-only{
+
 }
