@@ -136,11 +136,9 @@ option, output, p, pre, progress, ruby, section, table, textarea, ul, video
 
 
 body {
-	/* Center body in page */
 	margin: 0 auto;
 	max-width: 100vw;
 	padding: 2rem;
-	border-radius: .375rem;
 	overflow-x: hidden;
 	word-break: break-word;
 	overflow-wrap: break-word;
@@ -260,7 +258,7 @@ input[type="button"] {
 	background: var(--primary-color);
 	color: var(--primary__font-color);
 	border: 0;
-	border-radius: 4px;
+	border-radius: .30rem;
 	box-sizing: border-box;
 	cursor: pointer;
 }
@@ -523,6 +521,7 @@ article{
 	display: grid;
 	grid-template-columns: 1fr;
 	margin: 0;
+	align-items: center;
   }
   @media (min-width: 992px) {
 	.grid {
@@ -534,8 +533,18 @@ article{
   }
 
 
-
-
+/* 
+	Section makes a block that covers all page width.
+	Very useful for landing page sections
+*/
+section{
+	margin: -2rem;
+	padding-top: var(--size-6);
+	padding-bottom: var(--size-8);
+	border-bottom: .125rem solid var(--gray-0);
+	box-sizing: border-box;
+	margin-bottom: 2rem;
+}
 
 
 
@@ -555,6 +564,33 @@ article{
 }
 
 
-.boxes-container > *{
-	margin-bottom: var(--size-3);
+.container__inline-gap > *{
+	margin-right: var(--size-3);
+}
+
+.clear{
+	all:initial
+}
+
+.center-content{
+	display: flex;
+	justify-content: center;
+}
+
+
+button.big{
+	padding-inline: 2rem;
+	padding-block: 1rem;
+}
+
+
+.fx-row {
+    display: flex;
+    align-items: center;
+	flex-wrap: wrap;
+}
+
+.fx-row > * {
+    margin-inline: 1rem;
+	margin-block: .5rem
 }
