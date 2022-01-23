@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css starter-kit Demo</title>
+
+
+    <style>
+        @import url(shadows.css);
+@import url(animations.css);
+@import url(sizes.css);
+
+:root {
+	
+	/* Colors */
+		--bg-canvas: #FFFF; /* Main background color */
+		--font-color: #000; /* Main font color */
+		
+		--bg--selected: rgb(52, 195, 231); /* Background color for selected text */
+		--font-color--selected: rgb(0, 0, 0); /* Color for selected text */
+
+		--link-color: rgb(6, 154, 212); /* Font color for <a> tags */
+		--link-color--hover: rgb(19, 60, 148); /* Font color for <a> tag at :hover */
+
+
+		--primary-color: rgb(9, 153, 211); /* Main color on palette */
+		--primary-color__font: #FFFF; /* The colour to be used for text above the primary color */
+
+		--primary-color--hover: rgb(22, 134, 179); /* Main color on palette at :hover */
+		--primary__font-color--hover: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
+
+		--secondary-color: rgb(78, 230, 209); /* Secondary color on palette */
+		--secondary__font-color: rgb(0, 0, 0); /* The colour to be used for text above the secondary color */
+
+		--hover-secondary-color: rgb(73, 207, 189);  /* Secondary color on palette at :hover */
+		--hover-secondary__font-color: rgb(0, 0, 0); /* The colour to be used for text above the secondary color at :hover */
+		
+
+		/* DARK MODE */
+			--d-bg-canvas: rgb(47, 47, 47); /* Main background color */
+			--d-font-color: #FFFF; /* Main font color */
+
+			--d-bg--selected: rgb(52, 195, 231); /* Background color for selected text */
+			--d-font-color--selected: rgb(255, 255, 255); /* Color for selected text */
+
+			--d-link-color: rgb(6, 154, 212); /* Font color for <a> tags */
+			--d-hover-link-color: rgb(57, 104, 206); /* Font color for <a> tag at :hover */
+
+
+			--d-primary-color: rgb(9, 153, 211); /* Main color on palette */
+			--d-primary-color__font: #FFFF; /* The colour to be used for text above the primary color */
+
+			--d-primary-color--hover: rgb(22, 134, 179); /* Main color on palette at :hover */
+			--d-primary__font-color--hover: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
+
+			--d-secondary-color: rgb(78, 230, 209); /* Secondary color on palette */
+			--d-secondary__font-color: rgb(0, 0, 0); /* The colour to be used for text above the secondary color */
+
+			--d-hover-secondary-color: rgb(73, 207, 189); /* Secondary color on palette at :hover */
+			--d-hover-secondary__font-color: rgb(0, 0, 0); /* The colour to be used for text above the secondary color at :hover */
+		/* End DARK MODE */
+
+
+
+		/* 10 SHADES OF GRAY */
+			--gray-0: #f8f9fa;
+			--gray-1: #f1f3f5;
+			--gray-2: #e9ecef;
+			--gray-3: #dee2e6;
+			--gray-4: #ced4da;
+			--gray-5: #adb5bd;
+			--gray-6: #868e96;
+			--gray-7: #495057;
+			--gray-8: #343a40;
+			--gray-9: #212529;
+		/* End 10 SHADES OF GRAY */
+	/* End Colors */
+
+
+	
+
+
+	
+	
+	
+	
+	/* Typography | Global */
+	--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+
+
+	font-size: var(--text-base-size);
+	font-family: var(--font-sans);
+
+	/* Body font size */
+	--text-base-size: 1em;
+  
+	/* Type scale */
+	--text-scale-ratio: 1.25;
+
+	--text-xs: calc( var(--text-base-size) / var(--text-scale-ratio) / var(--text-scale-ratio));
+	--text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+	--text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+	--text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+	--text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+	--text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+
+
+	/* Input size */
+	--input-base-width: 10rem;
+  }
+  
+@media (min-width: 64rem) { /* Responsive decision applied to all text elements */
+	:root {
+		--text-base-size: 1.2em;
+		--text-scale-ratio: 1.25;
+	}
+}
+  
+h1, .text-xxl   { font-size: var(--text-xxl); }
+h2, .text-xl    { font-size: var(--text-xl); }
+h3, .text-lg    { font-size: var(--text-lg); }
+h4, .text-md    { font-size: var(--text-md); }
+h5, .text-base      { font-size: var(--text-base-size); }
+h6, small, .text-sm { font-size: var(--text-sm); }
+.text-xs        { font-size: var(--text-xs); }
+
+
+* {
+	/* Reset margins and padding */
+	margin: 0;
+	padding: 0;
+}
+
+* > *{
+	transition: 
+      background-color .3s var(--ease-3),
+      color .3s var(--ease-3);
+}
+
+
+address, area, aside, audio, blockquote, datalist, details,
+dl, fieldset, figure, form, input, iframe, img, meter, ol, optgroup,
+option, output, p, pre, progress, ruby, section, table, textarea, ul, video 
+{
+	/* Margins for most elements */
+	margin-bottom: var(--size-1);
+}
+
+
+
+body {
+	margin: 0 auto;
+	max-width: 100vw;
+	padding: 2rem;
+	overflow-x: hidden;
+	word-break: break-word;
+	overflow-wrap: break-word;
+
+	background: var(--bg-canvas);
+
+	/* Main body text */
+	color: var(--font-color);
+	line-height: 1.5;
+}
+
+
+
+::selection {
+	/* Set background color for selected text */
+	background: var(--bg--selected);
+	color: var(--font-color--selected);
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1;
+	padding-top: .875rem;
+}
+
+h1,
+h2,
+h3 {
+	padding-bottom: .125rem;
+	margin-bottom: .5rem;
+}
+
+
+h4,
+h5,
+h6 {
+	margin-bottom: .6rem;
+}
+
+
+
+a { /* Link */
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+a:hover { /* Link */
+	color: var(--link-color--hover);
+	cursor:pointer;
+}
+
+
+abbr:hover {
+	/* Set the '?' cursor while hovering an abbreviation */
+	cursor: help;
+}
+
+abbr {
+	cursor: help;
+}
+
+blockquote {
+	padding: 1.5rem;
+	background: var(--gray-0);
+	border-left: .3125rem solid var(--gray-3);
+	border-radius: .375rem;
+}
+
+blockquote *:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+
+
+header {
+	background: var(--gray-1);
+	border-bottom: 1px solid var(--gray-4);
+	padding: var(--size-1) 1.5rem;
+	
+	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
+
+	margin: -2rem calc(50% - 50vw) 2rem;
+
+	/* Shorthand for:
+
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw); */
+
+	padding-left: calc(50vw - 50%);
+	padding-right: calc(50vw - 50%);
+}
+
+
+header > *:first-child {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+header > *:last-child {
+	margin-bottom: 0;
+}
+
+
+a /* Link */ button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	font-size: var(--size-1);
+	display: inline-block;
+	padding: 6px 12px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	background: var(--primary-color);
+	color: var(--primary-color__font);
+	border: 0;
+	border-radius: .30rem;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+
+a /* Link */ button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+	cursor: default;
+	opacity: .5;
+
+	/* Set the [X] cursor while hovering a disabled link */
+	cursor: not-allowed;
+}
+
+
+
+.button:focus,
+.button:enabled:hover,
+button:focus,
+button:enabled:hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover {
+	background: var(--primary-color--hover);
+	color: var(--primary__font-color--hover);
+}
+
+
+a /* Link */ img {
+	margin-bottom: 0px;
+}
+
+
+code,
+pre,
+kbd,
+samp {
+	/* Set the font family for monospaced elements */
+	font-family: var(--font-mono);
+}
+
+
+code,
+samp,
+kbd,
+pre {
+	/* The main preformatted style. This is changed slightly across different cases. */
+	background: var(--gray-0);
+	border: .0625rem solid var(--gray-2);
+	border-radius: .25rem;
+	padding: .1875rem .375rem;
+	/* ↓ font-size is relative to containing element, so it scales for titles*/
+	font-size: 0.9em;
+}
+
+
+kbd {
+	/* Makes the kbd element look like a keyboard key */
+	border-bottom: .1875rem solid var(--gray-2);
+}
+
+
+pre {
+	padding: var(--size-1) 1.4rem;
+	max-width: 100%;
+	overflow: auto;
+}
+
+
+pre code {
+	/* When <code> is in a <pre>, reset it's formatting to blend in */
+	background: inherit;
+	font-size: inherit;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+
+code pre {
+	/* When <pre> is in a <code>, reset it's formatting to blend in */
+	display: inline;
+	background: inherit;
+	font-size: inherit;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+
+details {
+	/* Make the <details> look more "clickable" */
+	padding: .7rem var(--size-1);
+	background: var(--gray-0);
+	border: .0625rem solid var(--gray-1);
+	border-radius: .25rem;
+}
+
+
+summary {
+	/* Makes the <summary> look more like a "clickable" link with the pointer cursor */
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+details[open] {
+	/* Adjust the <details> padding while open */
+	padding-bottom: .75rem;
+}
+
+
+details[open] summary {
+	/* Adjust the <details> padding while open */
+	margin-bottom: .375rem;
+}
+
+
+details[open]>*:last-child {
+	/* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
+	margin-bottom: 0;
+}
+
+
+dt {
+	font-weight: bold;
+}
+
+
+dd::before {
+	/* Add an arrow to data table definitions */
+	content: '→ ';
+}
+
+
+hr {
+	/* Reset the border of the <hr> separator, then set a better line */
+	border: 0;
+	border-bottom: .0625rem solid var(--gray-2);
+	margin: var(--size-1) auto;
+}
+
+
+fieldset {
+	margin-top: var(--size-1);
+	padding: 2rem;
+	border: .0625rem solid var(--gray-3);
+	border-radius: .25rem;
+}
+
+
+legend {
+	padding: auto .5rem;
+}
+
+
+table {
+	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+	border-collapse: collapse;
+	width: 100%
+}
+
+td,
+th {
+	border: .0625rem solid var(--gray-3);
+	text-align: left;
+	padding: .5rem;
+}
+
+
+th {
+	background: var(--gray-0);
+}
+
+
+tr:nth-child(even) {
+	/* Set every other cell slightly darker. Improves readability. */
+	background: var(--gray-0);
+}
+
+table caption {
+	font-weight: bold;
+	margin-bottom: .6rem;
+}
+
+textarea {
+	/* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
+	max-width: 100%;
+}
+
+
+ol,
+ul {
+	/* Replace the browser default padding */
+	padding-left: 2rem;
+}
+
+
+li {
+	margin-top: .4rem;
+}
+
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-bottom: 0;
+}
+
+
+mark {
+	padding: .1875rem .375rem;
+	background: var(--bg--selected);
+	color: var(--font-color--selected);
+}
+
+
+textarea,
+select,
+input {
+	padding: .375rem .75rem;
+	margin-bottom: .5rem;
+	background: var(--gray-0);
+	color: var(--txt-1);
+	border: .0625rem solid var(--gray-2);
+	border-radius: .25rem;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+article{
+	padding: 1.5rem;
+	/* background: var(--gray-0); */
+	border-radius: .375rem;
+}
+
+
+
+/**
+* Grid
+* Minimal grid system with auto-layout columns
+*/
+.grid {
+	grid-column-gap: 3rem;
+	grid-row-gap: 3rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0;
+	align-items: center;
+  }
+  @media (min-width: 992px) {
+	.grid {
+	  grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+	}
+  }
+  .grid > * {
+	min-width: 0;
+  }
+
+
+/* 
+	Section makes a block that covers all page width.
+	Very useful for landing page sections
+*/
+section{
+	margin: -2rem;
+	padding-top: var(--size-6);
+	padding-bottom: var(--size-8);
+	border-bottom: .125rem solid var(--gray-0);
+	box-sizing: border-box;
+	margin-bottom: 2rem;
+}
+
+
+
+
+
+/**** UTILITY CLASSES ****/
+
+
+.chip{
+	display: inline;
+	padding-block: .125rem;
+	padding-inline: .85rem;
+	width: fit-content;
+	background-color: var(--gray-2);
+	border-radius: 0.4rem;
+	margin-right: .5rem;
+}
+
+
+.container__inline-gap > *{
+	margin-right: var(--size-3);
+}
+
+.clear{
+	all:initial
+}
+
+.center-content{
+	display: flex;
+	justify-content: center;
+}
+
+
+button.big{
+	padding-inline: 2rem;
+	padding-block: var(--size-1);
+}
+
+
+/* FLEXBOX */
+
+.fx-row { /* Allows you to make a responsive row of elements */
+    display: flex;
+    align-items: center;
+	flex-wrap: wrap;
+	row-gap: var(--size-1);
+}
+
+.fx-row > * {
+    margin-inline: var(--size-1);
+}
+
+
+.fx-column { /* Allows you to make a responsive column of elements */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+	row-gap: var(--size-2);
+}
+
+/* End FLEXBOX */
+
+
+/* BUTTONS */
+button.outline{
+    background-color: var(--bg-canvas);
+	border: .125rem solid var(--primary-color);
+	color: var(--primary-color);
+}
+
+button:active{
+    background-color: var(--bg-canvas);
+}
+
+button.outline:hover{
+	background-color: var(--primary-color);
+    color: var(--primary-color__font);
+}
+
+
+button.text-only{
+
+}
+
+:root {
+/* SHADOWS */
+--shadow-color: 220 1% 10%;
+--shadow-strength: 3%;
+
+--shadow-1: 0 1px 2px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+
+--shadow-2: 
+0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+
+--shadow-3: 
+0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+
+--shadow-4: 
+0 -2px 5px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+0 1px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+0 2px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+0 9px 9px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+0 16px 16px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%));
+
+--shadow-5: 
+0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+
+--shadow-6: 
+0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+0 3px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+0 7px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+0 12px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+0 22px 18px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+0 41px 33px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
+0 100px 80px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+
+--inner-shadow-0: inset 0 0 0 1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+--inner-shadow-1: inset 0 1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+--inner-shadow-2: inset 0 1px 4px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+--inner-shadow-3: inset 0 2px 8px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+--inner-shadow-4: inset 0 2px 14px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+/* End SHADOWS */
+
+}
+
+
+.box-shadow-1{
+    box-shadow: var(--shadow-1);
+    margin-bottom: var(--size-6);
+}
+
+.box-shadow-2{
+    box-shadow: var(--shadow-2);
+    margin-bottom: var(--size-6);
+}
+
+.box-shadow-3{
+    box-shadow: var(--shadow-3);
+    margin-bottom: var(--size-6);
+}
+
+.box-shadow-4{
+    box-shadow: var(--shadow-4);
+    margin-bottom: var(--size-6);
+}
+
+.box-shadow-5{
+    box-shadow: var(--shadow-5);
+    margin-bottom: var(--size-6);
+}
+
+.box-shadow-6{
+    box-shadow: var(--shadow-6);
+    margin-bottom: var(--size-6);
+}
+
+:root{
+    --size-00: .25rem;
+    --size-0: .5rem;
+    --size-1: 1rem;
+    --size-2: 1.25rem;
+    --size-3: 1.5rem;
+    --size-4: 1.75rem;
+    --size-5: 2rem;
+    --size-6: 3rem;
+    --size-7: 4rem;
+    --size-8: 5rem;
+    --size-9: 6rem;
+    --size-10: 7.5rem;
+    --size-11: 10rem;
+    --size-12: 15rem;
+    --size-13: 20rem;
+    --size-14: 30rem;
+    --size-15: 40rem;
+}
+
+
+.width-00   { width: var(--size-00); }
+.width-0    { width: var(--size-0); }
+.width-1    { width: var(--size-1); }
+.width-2    { width: var(--size-2); }
+.width-3    { width: var(--size-3); }
+.width-4    { width: var(--size-4); }
+.width-5    { width: var(--size-5); }
+.width-6    { width: var(--size-6); }
+.width-7    { width: var(--size-7); }
+.width-8    { width: var(--size-8); }
+.width-9    { width: var(--size-9); }
+.width-10   { width: var(--size-10); }
+.width-11   { width: var(--size-11); }
+.width-12   { width: var(--size-12); }
+.width-13   { width: var(--size-13); }
+.width-14   { width: var(--size-14); }
+.width-15   { width: var(--size-15); }
+
+
+:root{
+
+/* ANIMATIONS VARIABLES */
+    --animation-fade-in: fade-in .5s var(--ease-3);
+    --animation-fade-out: fade-out .5s var(--ease-3);
+    --animation-scale-up: scale-up .5s var(--ease-3);
+    --animation-scale-down: scale-down .5s var(--ease-3);
+    --animation-slide-out-up: slide-out-up .5s var(--ease-3);
+    --animation-slide-out-down: slide-out-down .5s var(--ease-3);
+    --animation-slide-out-right: slide-out-right .5s var(--ease-3);
+    --animation-slide-out-left: slide-out-left .5s var(--ease-3);
+    --animation-slide-in-up: slide-in-up .5s var(--ease-3);
+    --animation-slide-in-down: slide-in-down .5s var(--ease-3);
+    --animation-slide-in-right: slide-in-right .5s var(--ease-3);
+    --animation-slide-in-left: slide-in-left .5s var(--ease-3);
+    --animation-shake-x: shake-x .75s var(--ease-out-5);
+    --animation-shake-y: shake-y .75s var(--ease-out-5);
+    --animation-spin: spin 2s linear infinite;
+    --animation-ping: ping 5s var(--ease-out-3) infinite;
+    --animation-blink: blink 1s var(--ease-out-3) infinite;
+    --animation-float: float 3s var(--ease-in-out-3) infinite;
+    --animation-bounce: bounce 2s var(--ease-squish-2) infinite;
+    --animation-pulse: pulse 2s var(--ease-out-3) infinite;
+
+
+    --ease-1: cubic-bezier(.25, 0, .5, 1);
+    --ease-2: cubic-bezier(.25, 0, .4, 1);
+    --ease-3: cubic-bezier(.25, 0, .3, 1);
+    --ease-4: cubic-bezier(.25, 0, .2, 1);
+    --ease-5: cubic-bezier(.25, 0, .1, 1);
+    --ease-in-1: cubic-bezier(.25, 0, 1, 1);
+    --ease-in-2: cubic-bezier(.50, 0, 1, 1);
+    --ease-in-3: cubic-bezier(.70, 0, 1, 1);
+    --ease-in-4: cubic-bezier(.90, 0, 1, 1);
+    --ease-in-5: cubic-bezier(1, 0, 1, 1);
+    --ease-out-1: cubic-bezier(0, 0, .75, 1);
+    --ease-out-2: cubic-bezier(0, 0, .50, 1);
+    --ease-out-3: cubic-bezier(0, 0, .3, 1);
+    --ease-out-4: cubic-bezier(0, 0, .1, 1);
+    --ease-out-5: cubic-bezier(0, 0, 0, 1);
+    --ease-in-out-1: cubic-bezier(.1, 0, .9, 1);
+    --ease-in-out-2: cubic-bezier(.3, 0, .7, 1);
+    --ease-in-out-3: cubic-bezier(.5, 0, .5, 1);
+    --ease-in-out-4: cubic-bezier(.7, 0, .3, 1);
+    --ease-in-out-5: cubic-bezier(.9, 0, .1, 1);
+    --ease-elastic-1: cubic-bezier(.5, .75, .75, 1.25);
+    --ease-elastic-2: cubic-bezier(.5, 1, .75, 1.25);
+    --ease-elastic-3: cubic-bezier(.5, 1.25, .75, 1.25);
+    --ease-elastic-4: cubic-bezier(.5, 1.5, .75, 1.25);
+    --ease-elastic-5: cubic-bezier(.5, 1.75, .75, 1.25);
+    --ease-squish-1: cubic-bezier(.5, -.1, .1, 1.5);
+    --ease-squish-2: cubic-bezier(.5, -.3, .1, 1.5);
+    --ease-squish-3: cubic-bezier(.5, -.5, .1, 1.5);
+    --ease-squish-4: cubic-bezier(.5, -.7, .1, 1.5);
+    --ease-squish-5: cubic-bezier(.5, -.9, .1, 1.5);
+    --ease-step-1: steps(2);
+    --ease-step-2: steps(3);
+    --ease-step-3: steps(4);
+    --ease-step-4: steps(7);
+    --ease-step-5: steps(10);
+/* End ANIMATIONS VARIABLES*/
+
+}
+
+
+
+
+
+
+
+
+/************ ANIMATIONS ******************************/
+/************ ANIMATIONS ******************************/
+/************ ANIMATIONS ******************************/
+/************ ANIMATIONS ******************************/
+
+@keyframes fade-in {
+to { opacity: 1 }
+}
+@keyframes fade-out {
+to { opacity: 0 }
+}
+@keyframes scale-up {
+to { transform: scale(1.25) }
+}
+@keyframes scale-down {
+to { transform: scale(.75) }
+}
+@keyframes slide-out-up {
+to { transform: translateY(-100%) }
+}
+@keyframes slide-out-down {
+to { transform: translateY(100%) }
+}
+@keyframes slide-out-right {
+to { transform: translateX(100%) }
+}
+@keyframes slide-out-left {
+to { transform: translateX(-100%) }
+}
+@keyframes slide-in-up {
+from { transform: translateY(100%) }
+}
+@keyframes slide-in-down {
+from { transform: translateY(-100%) }
+}
+@keyframes slide-in-right {
+from { transform: translateX(-100%) }
+}
+@keyframes slide-in-left {
+from { transform: translateX(100%) }
+}
+@keyframes shake-x {
+0%, 100% { transform: translateX(0%) }
+20% { transform: translateX(-5%) }
+40% { transform: translateX(5%) }
+60% { transform: translateX(-5%) }
+80% { transform: translateX(5%) }
+}
+@keyframes shake-y {
+0%, 100% { transform: translateY(0%) }
+20% { transform: translateY(-5%) }
+40% { transform: translateY(5%) }
+60% { transform: translateY(-5%) }
+80% { transform: translateY(5%) }
+}
+@keyframes spin {
+to { transform: rotate(1turn) }
+}
+@keyframes ping {
+90%, 100% {
+transform: scale(2);
+opacity: 0;
+}
+}
+@keyframes blink {
+0%, 100% {
+opacity: 1
+}
+50% {
+opacity: .5
+}
+}
+@keyframes float {
+50% { transform: translateY(-25%) }
+}
+@keyframes bounce {
+25% { transform: translateY(-20%) }
+40% { transform: translateY(-3%) }
+0%, 60%,100% { transform: translateY(0) }
+}
+@keyframes pulse {
+50% { transform: scale(.9,.9) }
+}
+/************ End ANIMATIONS ************************/
+/************ End ANIMATIONS ************************/
+/************ End ANIMATIONS ************************/
+/************ End ANIMATIONS ************************/
+
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>css-starter-kit Demo</h1>
+    </header>
+
+    <div class="chip"> first tag </div>  
+    <div class="chip"> - Another tag - </div>  
+    <div class="chip"> #ThirdTag </div>
+
+    <h1>Heading 1</h1>
+    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h2>Heading 2</h2>
+    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h3>Heading 3</h3>
+    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h4>Heading 4</h4>
+    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h5>Heading 5</h5>
+    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h6>Heading 6</h6>
+    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p>
+        Lorem <mark>ipsum</mark> dolor sit amet <strong>consectetur</strong> adipisicing elit. Aut <i>harum
+            molestias</i> labore amet
+        possimus <s>exercitationem aperiam</s> earum, doloribus <u>nobis ducimus</u> maiores quia voluptates quis omnis
+        molestiae quisquam. <a href="#">Voluptatibus, officiis laudantium?</a>
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <code>Hic culpa, nobis doloremque</code> veniam non,
+        nihil
+        cupiditate odit repellat est <kbd>ALT + F4</kbd> expedita facilis. Fuga aspernatur, alias debitis eveniet totam
+        minima vel.
+    </p>
+
+    <ul>
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+    </ul>
+
+    <ol>
+        <li>Step 1</li>
+        <li>Step 2</li>
+        <li>????</li>
+        <li>PROFIT!!!</li>
+    </ol>
+
+    <dl>
+        <dt>Web</dt>
+        <dd>The part of the Internet that contains websites and web pages</dd>
+        <dt>HTML</dt>
+        <dd>A markup language for creating web pages</dd>
+        <dt>CSS</dt>
+        <dd>A technology to make HTML look better</dd>
+    </dl>
+
+    <details>
+        <summary> Expandir para ver detalles </summary>
+        <p> Está viendo los detalles xD </p>
+    </details>
+
+    <blockquote cite="https://en.wikiquote.org/wiki/Edward_Snowden">
+        If you think privacy is unimportant for you because you have nothing to hide, you might as well say free speech
+        is unimportant for you because you have nothing useful to say.<br><br>– Edward Snowden
+    </blockquote>
+
+    <pre>
+&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html&#x3E;
+    &#x3C;head&#x3E;
+    &#x3C;title&#x3E;Hello World&#x3C;/title&#x3E;
+    &#x3C;/head&#x3E;
+    &#x3C;body&#x3E;
+    &#x3C;p&#x3E;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&#x3C;/p&#x3E;
+    &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;</pre>
+
+    <br>
+    <hr>
+    <br>
+
+    <article class="box-shadow-3">
+        <h4> Create cards just with article and .box-shadow-* class </h4>
+        <p> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <code>Hic culpa, nobis doloremque</code> veniam non,
+            nihil
+            cupiditate odit repellat est <kbd>ALT + F4</kbd> expedita facilis. Fuga aspernatur, alias debitis eveniet totam
+            minima vel.
+        </p>
+    </article>
+
+    <article class="grid">
+        <article>
+            <h4> Card without shadow </h4>
+            <p>
+                Create this with <code>article</code> tag.
+                <br>
+                This block is inside a grid 
+                <br>
+                (Just using <code>.grid</code> on container element)
+            </p>
+        </article>
+        <article>
+            <h4> Card without shadow </h4>
+            <p>
+                Create this with <code>article</code> tag.
+                This block is inside a grid (Just using <code>.grid</code> on container element)
+            </p>
+        </article>
+        <article>
+            <h4> Card without shadow </h4>
+            <p>
+                Create this with <code>article</code> tag.
+                This block is inside a grid (Just using <code>.grid</code> on container element)
+            </p>
+        </article>
+    </article>
+
+    <hr>
+    <br>
+
+    <h2>Sizes with utility classes and custom properties</h2>
+
+    <article class="boxes-container" style="color: white;">
+        <div class="width-00" style="background-color: var(--primary-color);" >
+            .
+        </div>
+        <div class="width-0" style="background-color: var(--primary-color);" >
+            0
+        </div>
+        <div class="width-1" style="background-color: var(--primary-color);" >
+            1
+        </div>
+        <div class="width-2" style="background-color: var(--primary-color);" >
+            2
+        </div>
+        <div class="width-3" style="background-color: var(--primary-color);" >
+            3
+        </div>
+        <div class="width-4" style="background-color: var(--primary-color);" >
+            4
+        </div>
+        <div class="width-5" style="background-color: var(--primary-color);" >
+            5
+        </div>
+        <div class="width-6" style="background-color: var(--primary-color);" >
+            6
+        </div>
+        <div class="width-7" style="background-color: var(--primary-color);" >
+            7
+        </div>
+        <div class="width-8" style="background-color: var(--primary-color);" >
+            8
+        </div>
+        <div class="width-9" style="background-color: var(--primary-color);" >
+            9
+        </div>
+        <div class="width-10" style="background-color: var(--primary-color);" >
+            10
+        </div>
+        <div class="width-11" style="background-color: var(--primary-color);" >
+            11
+        </div>
+        <div class="width-12" style="background-color: var(--primary-color);" >
+            12
+        </div>
+        <div class="width-13" style="background-color: var(--primary-color);" >
+            13
+        </div>
+        <div class="width-14" style="background-color: var(--primary-color);" >
+            14
+        </div>
+        <div class="width-15" style="background-color: var(--primary-color);" >
+            15
+        </div>
+    </article>
+
+    <br>   
+    <hr>
+    <br>
+
+    <table>
+        <caption>Ho-kago Tea Time</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Instrument</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Yui Hirasawa</td>
+                <td>Lead Guitar</td>
+            </tr>
+            <tr>
+                <td>Mio Akiyama</td>
+                <td>Bass</td>
+            </tr>
+            <tr>
+                <td>Ritsu Tainaka</td>
+                <td>Drums</td>
+            </tr>
+            <tr>
+                <td>Tsumugi Kotobuki</td>
+                <td>Keyboard</td>
+            </tr>
+            <tr>
+                <td>Azusa Nakano</td>
+                <td>Rhythm Guitar</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Instrument</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <form>
+        <p><em>This is not a real form and does not submit or save any information.</em></p>
+        <p>
+            <label>First name</label><br>
+            <input type="text" name="first_name">
+        </p>
+        <p>
+            <label>Last name</label><br>
+            <input type="text" name="last_name">
+        </p>
+        <p>
+            <label>Gender</label><br>
+            <label>
+                <input type="radio" name="gender" value="Male">
+                Male
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="gender" value="Female">
+                Female
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="gender" value="other-none-na">
+                Non-binary
+            </label>
+        </p>
+        <p>
+            <label>Email</label><br>
+            <input type="email" name="email" required="">
+        </p>
+        <p>
+            <label>Phone number</label><br>
+            <input type="tel" name="phone">
+        </p>
+        <p>
+            <label>Password</label><br>
+            <input type="password" name="password">
+        </p>
+        <p>
+            <label>Country</label><br>
+            <select>
+                <option>China</option>
+                <option>India</option>
+                <option>United States</option>
+                <option>Indonesia</option>
+                <option>Brazil</option>
+            </select>
+        </p>
+        <p>
+            <label>Comments</label><br>
+            <textarea></textarea>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" value="terms">
+                I agree to the <a>terms and conditions</a>
+            </label>
+        </p>
+        <p>
+            <button>Sign up</button>
+            <button type="reset">Reset form</button>
+            <button disabled="disabled">Disabled</button>
+        </p>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <img src="https://elements.xz.style/assets/fuji-daniel-hehn.jpg" alt="Mt. Fuji">
+
+    <p>
+        Inline image: <a href="#"><img src="https://elements.xz.style/assets/fuji-daniel-hehn.jpg" width="50" alt="Mt. Fuji"></a>
+    </p>
+
+    <script async defer src="https://api.newcss.net/latest.js"></script>
+    <noscript><img src="https://api.newcss.net/noscript.gif" alt=""></noscript>
+</body>
+
+</html>

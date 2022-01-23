@@ -1,0 +1,107 @@
+:root {
+	
+	/* Colors */
+		--bg-canvas-1: #FFFF; /* Main background color */
+		--bg-canvas-2: #ffede9; /* Secondary background color */
+		--bg-canvas-2: #fff4e9; /* Third background color */
+
+		--font-color: #000; /* Main font color */
+		
+		--bg--selected: rgb(52, 195, 231); /* Background color for selected text */
+		--font-color--selected: rgb(0, 0, 0); /* Color for selected text */
+
+		--link-color: var(--primary-color); /* Font color for <a> tags */
+		--link-color--hover: var(--primary-color--hover); /* Font color for <a> tag at :hover */
+
+
+		--primary-color: #210095; /* Main color on palette */
+		--primary-color__font: #FFFF; /* The colour to be used for text above the primary color */
+
+		--primary-color--hover: var(--secondary-color); /* Main color on palette at :hover */
+		--primary__font-color--hover: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
+
+		--secondary-color: #04004d; /* Secondary color on palette */
+		--secondary__font-color: rgb(255, 255, 255); /* The colour to be used for text above the secondary color */
+
+		--hover-secondary-color: #080269;  /* Secondary color on palette at :hover */
+		--hover-secondary__font-color: rgb(255, 255, 255); /* The colour to be used for text above the secondary color at :hover */
+		
+
+		/* DARK MODE */
+			--d-bg-canvas: rgb(47, 47, 47); /* Main background color */
+			--d-font-color: #FFFF; /* Main font color */
+
+			--d-bg--selected: rgb(52, 195, 231); /* Background color for selected text */
+			--d-font-color--selected: rgb(255, 255, 255); /* Color for selected text */
+
+			--d-link-color: rgb(6, 154, 212); /* Font color for <a> tags */
+			--d-hover-link-color: rgb(57, 104, 206); /* Font color for <a> tag at :hover */
+
+
+			--d-primary-color: rgb(9, 153, 211); /* Main color on palette */
+			--d-primary-color__font: #FFFF; /* The colour to be used for text above the primary color */
+
+			--d-primary-color--hover: rgb(22, 134, 179); /* Main color on palette at :hover */
+			--d-primary__font-color--hover: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
+
+			--d-secondary-color: rgb(78, 230, 209); /* Secondary color on palette */
+			--d-secondary__font-color: rgb(0, 0, 0); /* The colour to be used for text above the secondary color */
+
+			--d-hover-secondary-color: rgb(73, 207, 189); /* Secondary color on palette at :hover */
+			--d-hover-secondary__font-color: rgb(0, 0, 0); /* The colour to be used for text above the secondary color at :hover */
+		/* End DARK MODE */
+
+
+
+		/* 10 SHADES OF GRAY */
+			--gray-0: #f8f9fa;
+			--gray-1: #f1f3f5;
+			--gray-2: #e9ecef;
+			--gray-3: #dee2e6;
+			--gray-4: #ced4da;
+			--gray-5: #adb5bd;
+			--gray-6: #868e96;
+			--gray-7: #495057;
+			--gray-8: #343a40;
+			--gray-9: #212529;
+		/* End 10 SHADES OF GRAY */
+	/* End Colors */
+}
+
+
+.bg-canvas-1 { background-color: var(--bg-canvas-1); }
+.bg-canvas-2 { background-color: var(--bg-canvas-2); }
+.bg-canvas-3 { background-color: var(--bg-canvas-3); }
+
+
+.bg-primary { background-color: var(--primary-color); }
+.bg-secondary { background-color: var(--secondary-color); }
+
+
+
+.color-primary { color: var(--primary-color); }
+.color-secondary { color: var(--secondary-color); }
+
+
+.color-gray-0 { color: var(--gray-0); }
+.color-gray-1 { color: var(--gray-1); }
+.color-gray-2 { color: var(--gray-2); }
+.color-gray-3 { color: var(--gray-3); }
+.color-gray-4 { color: var(--gray-4); }
+.color-gray-5 { color: var(--gray-5); }
+.color-gray-6 { color: var(--gray-6); }
+.color-gray-7 { color: var(--gray-7); }
+.color-gray-8 { color: var(--gray-8); }
+.color-gray-9 { color: var(--gray-9); }
+
+
+.bg-gray-0 { background-color: var(--gray-0); }
+.bg-gray-1 { background-color: var(--gray-1); }
+.bg-gray-2 { background-color: var(--gray-2); }
+.bg-gray-3 { background-color: var(--gray-3); }
+.bg-gray-4 { background-color: var(--gray-4); }
+.bg-gray-5 { background-color: var(--gray-5); }
+.bg-gray-6 { background-color: var(--gray-6); }
+.bg-gray-7 { background-color: var(--gray-7); }
+.bg-gray-8 { background-color: var(--gray-8); }
+.bg-gray-9 { background-color: var(--gray-9); }
