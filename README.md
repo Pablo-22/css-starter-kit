@@ -1,2 +1,2 @@
 # css-starter-kit
-A simple, lightweight and nice looking css boilerplate
+An easy-to-use and nice looking css boilerplate
