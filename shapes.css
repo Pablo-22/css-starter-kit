@@ -1,0 +1,125 @@
+/* CIRCLE */
+.circle-0{
+	border-radius: 50%;
+	width: var(--size-0);
+	height: var(--size-0);
+	background-color: var(--primary-color);
+}
+
+.circle-1{
+	border-radius: 50%;
+	width: var(--size-1);
+	height: var(--size-1);
+	background-color: var(--primary-color);
+}
+
+.circle-2{
+	border-radius: 50%;
+	width: var(--size-2);
+	height: var(--size-2);
+	background-color: var(--primary-color);
+}
+
+.circle-3{
+	border-radius: 50%;
+	width: var(--size-3);
+	height: var(--size-3);
+	background-color: var(--primary-color);
+}
+
+
+.circle-4{
+	border-radius: 50%;
+	width: var(--size-4);
+	height: var(--size-4);
+	background-color: var(--primary-color);
+}
+
+
+.circle-5{
+	border-radius: 50%;
+	width: var(--size-5);
+	height: var(--size-5);
+	background-color: var(--primary-color);
+}
+
+
+.circle-6{
+	border-radius: 50%;
+	width: var(--size-6);
+	height: var(--size-6);
+	background-color: var(--primary-color);
+}
+
+
+.circle-7{
+	border-radius: 50%;
+	width: var(--size-7);
+	height: var(--size-7);
+	background-color: var(--primary-color);
+}
+
+.circle-8{
+	border-radius: 50%;
+	width: var(--size-8);
+	height: var(--size-8);
+	background-color: var(--primary-color);
+}
+
+.circle-9{
+	border-radius: 50%;
+	width: var(--size-9);
+	height: var(--size-9);
+	background-color: var(--primary-color);
+}
+
+
+.circle-10{
+	border-radius: 50%;
+	width: var(--size-10);
+	height: var(--size-10);
+	background-color: var(--primary-color);
+}
+
+
+.circle-11{
+	border-radius: 50%;
+	width: var(--size-11);
+	height: var(--size-11);
+	background-color: var(--primary-color);
+}
+
+
+.circle-12{
+	border-radius: 50%;
+	width: var(--size-12);
+	height: var(--size-12);
+	background-color: var(--primary-color);
+}
+
+
+
+.circle-13{
+	border-radius: 50%;
+	width: var(--size-13);
+	height: var(--size-13);
+	background-color: var(--primary-color);
+}
+
+
+.circle-14{
+	border-radius: 50%;
+	width: var(--size-14);
+	height: var(--size-14);
+	background-color: var(--primary-color);
+}
+
+
+.circle-15{
+	border-radius: 50%;
+	width: var(--size-15);
+	height: var(--size-15);
+	background-color: var(--primary-color);
+}
+
+/* End CIRCLE */

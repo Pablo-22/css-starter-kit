@@ -54,29 +54,35 @@
 .box-shadow-1{
     box-shadow: var(--shadow-1);
     margin-bottom: var(--size-6);
+    border: none;
 }
 
 .box-shadow-2{
     box-shadow: var(--shadow-2);
     margin-bottom: var(--size-6);
+    border: none;
 }
 
 .box-shadow-3{
     box-shadow: var(--shadow-3);
     margin-bottom: var(--size-6);
+    border: none;
 }
 
 .box-shadow-4{
     box-shadow: var(--shadow-4);
     margin-bottom: var(--size-6);
+    border: none;
 }
 
 .box-shadow-5{
     box-shadow: var(--shadow-5);
     margin-bottom: var(--size-6);
+    border: none;
 }
 
 .box-shadow-6{
     box-shadow: var(--shadow-6);
     margin-bottom: var(--size-6);
+    border: none;
 }
