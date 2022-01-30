@@ -353,3 +353,83 @@
 .p-b-13   { padding-bottom: var(--size-13); }
 .p-b-14   { padding-bottom: var(--size-14); }
 .p-b-15   { padding-bottom: var(--size-15); }
+
+
+
+
+/* PERCENTAGES */
+
+/* Width % */
+.w-10p   { width: 10%;  }
+.w-20p   { width: 20%;  }
+.w-30p   { width: 30%;  }
+.w-40p   { width: 40%;  }
+.w-50p   { width: 50%;  }
+.w-60p   { width: 60%;  }
+.w-70p   { width: 70%;  }
+.w-80p   { width: 80%;  }
+.w-90p   { width: 90%;  }
+.w-100p  { width: 100%; }
+
+
+/* Height % */
+.h-10p   { height: 10%;  }
+.h-20p   { height: 20%;  }
+.h-30p   { height: 30%;  }
+.h-40p   { height: 40%;  }
+.h-50p   { height: 50%;  }
+.h-60p   { height: 60%;  }
+.h-70p   { height: 70%;  }
+.h-80p   { height: 80%;  }
+.h-90p   { height: 90%;  }
+.h-100p  { height: 100%; }
+
+
+/* Min Width % */
+.min-w-10p   { min-width: 10%;  }
+.min-w-20p   { min-width: 20%;  }
+.min-w-30p   { min-width: 30%;  }
+.min-w-40p   { min-width: 40%;  }
+.min-w-50p   { min-width: 50%;  }
+.min-w-60p   { min-width: 60%;  }
+.min-w-70p   { min-width: 70%;  }
+.min-w-80p   { min-width: 80%;  }
+.min-w-90p   { min-width: 90%;  }
+.min-w-100p  { min-width: 100%; }
+
+/* Max width % */
+.max-w-10p   { max-width: 10%;  }
+.max-w-20p   { max-width: 20%;  }
+.max-w-30p   { max-width: 30%;  }
+.max-w-40p   { max-width: 40%;  }
+.max-w-50p   { max-width: 50%;  }
+.max-w-60p   { max-width: 60%;  }
+.max-w-70p   { max-width: 70%;  }
+.max-w-80p   { max-width: 80%;  }
+.max-w-90p   { max-width: 90%;  }
+.max-w-100p  { max-width: 100%; }
+
+
+/* Max - Height % */
+.max-h-10p   { max-height: 10%;  }
+.max-h-20p   { max-height: 20%;  }
+.max-h-30p   { max-height: 30%;  }
+.max-h-40p   { max-height: 40%;  }
+.max-h-50p   { max-height: 50%;  }
+.max-h-60p   { max-height: 60%;  }
+.max-h-70p   { max-height: 70%;  }
+.max-h-80p   { max-height: 80%;  }
+.max-h-90p   { max-height: 90%;  }
+.max-h-100p  { max-height: 100%; }
+
+/* Min Height % */
+.min-h-10p   { min-height: 10%;  }
+.min-h-20p   { min-height: 20%;  }
+.min-h-30p   { min-height: 30%;  }
+.min-h-40p   { min-height: 40%;  }
+.min-h-50p   { min-height: 50%;  }
+.min-h-60p   { min-height: 60%;  }
+.min-h-70p   { min-height: 70%;  }
+.min-h-80p   { min-height: 80%;  }
+.min-h-90p   { min-height: 90%;  }
+.min-h-100p  { min-height: 100%; }

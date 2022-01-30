@@ -458,6 +458,15 @@ section{
 }
 
 
+.fx-row-center { /* Allows you to make a responsive row of elements */
+    display: flex;
+    align-items: center;
+	flex-wrap: wrap;
+	row-gap: var(--size-1);
+	justify-content: space-around;
+}
+
+
 .fx-column { /* Allows you to make a responsive column of elements */
     display: flex;
     flex-direction: column;
@@ -475,8 +484,9 @@ section{
 
 .no-border{
 	border:none;
+	outline: none;
 }
 
-.border-1{
+.border{
 	border: var(--size-01) solid var(--gray-1);
 }
