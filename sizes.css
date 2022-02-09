@@ -4,7 +4,7 @@
 	--base-size: 1em;
   
 	/* scale */
-	--size-scale-ratio: 1.25;
+	--size-scale-ratio: 1.35;
 
 
     --size-03: calc( var(--size-02) / var(--size-scale-ratio));

@@ -52,6 +52,10 @@ body {
 	line-height: 1.5;
 }
 
+body.no-p{
+	padding: 0;
+}
+
 
 
 ::selection {
@@ -119,7 +123,7 @@ blockquote *:last-child {
 header {
 	background: var(--gray-1);
 	border-bottom: 1px solid var(--gray-4);
-	padding: var(--size-1) 1.5rem;
+	padding: var(--size-00);
 	
 	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
 
