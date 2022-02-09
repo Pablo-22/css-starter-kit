@@ -29,10 +29,10 @@
 
 address, area, aside, audio, blockquote, datalist, details,
 dl, fieldset, figure, form, input, iframe, img, meter, ol, optgroup,
-option, output, p, pre, progress, ruby, section, table, textarea, ul, video 
+option, output, pre, progress, ruby, section, table, textarea, ul, video 
 {
 	/* Margins for most elements */
-	margin-bottom: var(--size-1);
+	margin-bottom: var(--size-0);
 }
 
 
@@ -498,6 +498,26 @@ section{
 	border: var(--size-01) solid var(--gray-1);
 }
 
-.block:not(:last-child) {
-	margin-bottom: var(--size-1);
+.block > *:not(:last-child) {
+	margin-bottom: var(--size-0);
   }
+
+
+.rounded{
+	border-radius: 1vw;
+}
+
+
+.card{
+	border: var(--size-01) solid var(--gray-1);
+	border-radius: 1vw;
+	padding: var(--size-1);
+}
+
+.card > *:not(:last-child) {
+	margin-bottom: var(--size-0);
+}
+
+.bold {
+	font-weight: bold;
+}

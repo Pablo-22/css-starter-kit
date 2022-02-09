@@ -24,7 +24,7 @@
 
 @media (min-width: 64rem) { /* Responsive decision applied to all text elements */
 	:root {
-		--text-base-size: 1.2em;
+		--text-base-size: 1.1em;
 		--text-scale-ratio: 1.25;
 	}
 }

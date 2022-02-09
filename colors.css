@@ -14,13 +14,13 @@
 		--link-color--hover: var(--primary-color--hover); /* Font color for <a> tag at :hover */
 
 
-		--primary-color: #210095; /* Main color on palette */
+		--primary-color: #027a60; /* Main color on palette */
 		--primary-color__font: #FFFF; /* The colour to be used for text above the primary color */
 
 		--primary-color--hover: var(--secondary-color); /* Main color on palette at :hover */
 		--primary__font-color--hover: rgb(255, 255, 255); /* The colour to be used for text above the primary color at :hover */
 
-		--secondary-color: #04004d; /* Secondary color on palette */
+		--secondary-color: #00444d; /* Secondary color on palette */
 		--secondary__font-color: rgb(255, 255, 255); /* The colour to be used for text above the secondary color */
 
 		--hover-secondary-color: #080269;  /* Secondary color on palette at :hover */
@@ -50,6 +50,11 @@
 			--d-hover-secondary-color: rgb(73, 207, 189); /* Secondary color on palette at :hover */
 			--d-hover-secondary__font-color: rgb(0, 0, 0); /* The colour to be used for text above the secondary color at :hover */
 		/* End DARK MODE */
+
+
+		--green: rgb(0, 199, 43);
+		--yellow: rgb(255, 251, 0);
+		--red: rgb(255, 0, 0);
 
 
 
@@ -105,3 +110,13 @@
 .bg-gray-7 { background-color: var(--gray-7); }
 .bg-gray-8 { background-color: var(--gray-8); }
 .bg-gray-9 { background-color: var(--gray-9); }
+
+
+
+.color-green { color: var(--green); }
+.color-yellow { color: var(--yellow); }
+.color-red { color: var(--red); }
+
+.bg-green { background-color: var(--green); }
+.bg-yellow { background-color: var(--yellow); }
+.bg-red { background-color: var(--red); }
